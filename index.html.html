@@ -1,0 +1,702 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Bengkel Jus Azzam - Menyajikan aneka jus segar, makanan lezat, dan snack pilihan di Konawe Selatan, Sulawesi Tenggara.">
+    <meta name="keywords" content="Bengkel Jus Azzam, Kuliner Konawe Selatan, Jus Buah Segar, Rumah Makan Sulawesi Tenggara">
+    <title>Bengkel Jus Azzam | Menyajikan Kebaikan Dalam Setiap Hidangan</title>
+
+    <!-- Google Fonts: Poppins -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        :root {
+            --primary: #1b4332;       /* Deep Forest Emerald */
+            --primary-light: #2d6a4f; /* Emerald Accent */
+            --accent: #d4a373;        /* Warm Gold / Amber */
+            --accent-hover: #b98b5c;
+            --bg-light: #fefae0;      /* Warm Soft Off-White */
+            --bg-card: #ffffff;
+            --text-dark: #2b2d42;
+            --text-muted: #6c757d;
+            --shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+            --transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background-color: #faf9f6;
+            color: var(--text-dark);
+            line-height: 1.6;
+        }
+
+        /* Container & Layout */
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        section {
+            padding: 80px 0;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .section-header h2 {
+            font-size: 2.2rem;
+            color: var(--primary);
+            position: relative;
+            display: inline-block;
+            margin-bottom: 10px;
+        }
+
+        .section-header h2::after {
+            content: '';
+            width: 50%;
+            height: 3px;
+            background: var(--accent);
+            position: absolute;
+            bottom: -6px;
+            left: 25%;
+            border-radius: 2px;
+        }
+
+        .section-header p {
+            color: var(--text-muted);
+            font-size: 1rem;
+        }
+
+        /* Header & Navbar */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 2px 15px rgba(0,0,0,0.05);
+            z-index: 1000;
+            transition: var(--transition);
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 75px;
+        }
+
+        .brand-logo {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            gap: 12px;
+        }
+
+        .logo-badge {
+            background: var(--primary);
+            color: var(--accent);
+            font-weight: 700;
+            font-size: 1.2rem;
+            width: 44px;
+            height: 44px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 12px;
+            box-shadow: 0 4px 8px rgba(27, 67, 50, 0.2);
+        }
+
+        .brand-name {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: var(--primary);
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 25px;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--text-dark);
+            font-weight: 500;
+            font-size: 0.95rem;
+            transition: var(--transition);
+            position: relative;
+        }
+
+        .nav-links a:hover {
+            color: var(--accent);
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            font-size: 1.5rem;
+            background: none;
+            border: none;
+            cursor: pointer;
+            color: var(--primary);
+        }
+
+        /* Hero Section */
+        .hero {
+            min-height: 100vh;
+            background: linear-gradient(rgba(27, 67, 50, 0.75), rgba(27, 67, 50, 0.85)), 
+                        url('buah2.jpeg') center/cover no-repeat;
+            display: flex;
+            align-items: center;
+            text-align: center;
+            color: #ffffff;
+            padding-top: 75px;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+            animation: fadeInDown 1s ease;
+        }
+
+        .hero p {
+            font-size: 1.15rem;
+            max-width: 700px;
+            margin: 0 auto 30px;
+            color: #f1f1f1;
+            font-weight: 300;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 32px;
+            background: var(--accent);
+            color: #ffffff;
+            text-decoration: none;
+            border-radius: 30px;
+            font-weight: 600;
+            transition: var(--transition);
+            box-shadow: 0 4px 15px rgba(212, 163, 115, 0.4);
+        }
+
+        .btn:hover {
+            background: var(--accent-hover);
+            transform: translateY(-3px);
+        }
+
+        /* Tentang Kami */
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: center;
+        }
+
+        .about-img {
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+        }
+
+        .about-img img {
+            width: 100%;
+            height: 100%;
+            display: block;
+            object-fit: cover;
+        }
+
+        .about-text h3 {
+            font-size: 1.8rem;
+            color: var(--primary);
+            margin-bottom: 15px;
+        }
+
+        .about-text p {
+            margin-bottom: 20px;
+            color: var(--text-muted);
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .feature-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-weight: 500;
+            color: var(--primary);
+        }
+
+        .feature-item i {
+            color: var(--accent);
+        }
+
+        /* Menu Section */
+        .filter-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 12px;
+            margin-bottom: 40px;
+            flex-wrap: wrap;
+        }
+
+        .filter-btn {
+            background: #ffffff;
+            border: 1px solid #e0e0e0;
+            padding: 8px 22px;
+            border-radius: 25px;
+            cursor: pointer;
+            font-weight: 500;
+            transition: var(--transition);
+        }
+
+        .filter-btn.active, .filter-btn:hover {
+            background: var(--primary);
+            color: #ffffff;
+            border-color: var(--primary);
+        }
+
+        .menu-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+            gap: 25px;
+        }
+
+        .menu-card {
+            background: var(--bg-card);
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .menu-card:hover {
+            transform: translateY(-8px);
+        }
+
+        .menu-img-wrap {
+            height: 190px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .menu-img-wrap img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .menu-card:hover .menu-img-wrap img {
+            transform: scale(1.1);
+        }
+
+        .category-tag {
+            position: absolute;
+            top: 12px;
+            right: 12px;
+            background: rgba(27, 67, 50, 0.85);
+            color: #ffffff;
+            font-size: 0.75rem;
+            padding: 4px 10px;
+            border-radius: 12px;
+            backdrop-filter: blur(4px);
+        }
+
+        .menu-details {
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+        }
+
+        .menu-title {
+            font-size: 1.15rem;
+            font-weight: 600;
+            margin-bottom: 6px;
+            color: var(--text-dark);
+        }
+
+        .menu-desc {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            margin-bottom: 15px;
+            flex-grow: 1;
+        }
+
+        .menu-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-top: 1px solid #f0f0f0;
+            padding-top: 12px;
+        }
+
+        .menu-price {
+            font-weight: 700;
+            color: var(--primary);
+            font-size: 1rem;
+        }
+
+        /* Galeri */
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 20px;
+        }
+
+        .gallery-item {
+            border-radius: 16px;
+            overflow: hidden;
+            height: 240px;
+            position: relative;
+            box-shadow: var(--shadow);
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.08);
+        }
+
+        /* Footer */
+        footer {
+            background: var(--primary);
+            color: #ffffff;
+            padding: 60px 0 20px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr;
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-col h4 {
+            font-size: 1.1rem;
+            margin-bottom: 15px;
+            color: var(--accent);
+        }
+
+        .footer-col ul {
+            list-style: none;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-col ul li a {
+            color: #d8d8d8;
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        .footer-col ul li a:hover {
+            color: var(--accent);
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            font-size: 0.85rem;
+            color: #c0c0c0;
+        }
+
+        /* Responsive */
+        @media (max-width: 992px) {
+            .about-content, .footer-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .mobile-menu-btn {
+                display: block;
+            }
+
+            .nav-links {
+                position: absolute;
+                top: 75px;
+                left: 0;
+                width: 100%;
+                background: #ffffff;
+                flex-direction: column;
+                padding: 20px 0;
+                text-align: center;
+                gap: 15px;
+                box-shadow: 0 10px 15px rgba(0,0,0,0.05);
+                display: none;
+            }
+
+            .nav-links.active {
+                display: flex;
+            }
+
+            .hero h1 {
+                font-size: 2.2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="container navbar">
+            <a href="#beranda" class="brand-logo">
+                <div class="logo-badge">BJ</div>
+                <span class="brand-name">Bengkel Jus Azzam</span>
+            </a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#beranda">Beranda</a></li>
+                <li><a href="#tentang">Tentang Kami</a></li>
+                <li><a href="#menu">Menu</a></li>
+                <li><a href="#galeri">Galeri</a></li>
+            </ul>
+            <button class="mobile-menu-btn" id="menuBtn" aria-label="Toggle Menu">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="beranda">
+        <div class="container">
+            <h1>Menyajikan Kebaikan Dalam Setiap Hidangan</h1>
+            <p>Pilihan jus buah segar alami, bakso, mie pangsit, hidangan khas nusantara, dan camilan lezat untuk menemani momen berharga Anda di Konawe Selatan.</p>
+            <a href="#menu" class="btn"><i class="fas fa-utensils"></i> Lihat Daftar Menu</a>
+        </div>
+    </section>
+
+    <!-- Tentang Kami -->
+    <section id="tentang">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-img">
+                    <img src="bj2-straightened.jpg" alt="Suasana Bengkel Jus Azzam">
+                </div>
+                <div class="about-text">
+                    <div class="section-header" style="text-align: left; margin-bottom: 20px;">
+                        <h2>Tentang Kami</h2>
+                    </div>
+                    <h3>Cita Rasa Otentik, Bahan Baku Pilihan</h3>
+                    <p>Berawal dari komitmen menyajikan hidangan sehat dan nikmat, <strong>Bengkel Jus Azzam</strong> menghadirkan kombinasi menu bakso, mie pangsit, olahan ayam & ikan khas, serta aneka varian jus segar dan minuman menyegarkan di Sulawesi Tenggara.</p>
+                    <p>Kami memastikan seluruh bahan olahan, buah-buahan, dan rempah diolah segar setiap hari tanpa bahan pengawet demi menjaga kebaikan nutrisi di setiap suapan dan tegukan.</p>
+                    <div class="features-grid">
+                        <div class="feature-item"><i class="fas fa-leaf"></i> 100% Buah & Sayur Segar</div>
+                        <div class="feature-item"><i class="fas fa-certificate"></i> Halal & Higienis</div>
+                        <div class="feature-item"><i class="fas fa-heart"></i> Rasa Khas Otentik</div>
+                        <div class="feature-item"><i class="fas fa-wallet"></i> Harga Terjangkau</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Menu / Produk -->
+    <section id="menu" style="background-color: #f7f9f8;">
+        <div class="container">
+            <div class="section-header">
+                <h2>Daftar Menu</h2>
+                <p>Jelajahi pilihan hidangan favorit kami: Makanan Lezat, Jus & Minuman Segar, serta Snack Renyah.</p>
+            </div>
+
+            <div class="filter-buttons">
+                <button class="filter-btn active" onclick="filterMenu(event, 'all')">Semua Menu (51)</button>
+                <button class="filter-btn" onclick="filterMenu(event, 'makanan')">Makanan (22)</button>
+                <button class="filter-btn" onclick="filterMenu(event, 'minuman')">Jus & Minuman (26)</button>
+                <button class="filter-btn" onclick="filterMenu(event, 'snack')">Snack (3)</button>
+            </div>
+
+            <div class="menu-grid" id="menuGrid">
+                <!-- Data menu dirender via JavaScript secara dinamis -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Galeri -->
+    <section id="galeri">
+        <div class="container">
+            <div class="section-header">
+                <h2>Suasana</h2>
+                <p>Momen penyajian, dapur higienis, dan suasana santai di Bengkel Jus Azzam.</p>
+            </div>
+            <div class="gallery-grid">
+                <div class="gallery-item"><img src="bj1.jpeg" alt="Proses Pembuatan Jus"></div>
+                <div class="gallery-item"><img src="baa-straightened.jpg" alt="Area Duduk Rumah Makan"></div>
+                <div class="gallery-item"><img src="sann.jpeg" alt="Plating Hidangan"></div>
+                <div class="gallery-item"><img src="abi2.jpeg" alt="Penyajian Minuman Buah"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3 style="color: var(--accent); margin-bottom: 12px;">Bengkel Jus Azzam</h3>
+                    <p style="font-size: 0.9rem; color: #d8d8d8;">Website ini kami hadirkan sebagai panduan menu digital Anda. Sudah tahu mau pesan apa? Yuk, langsung meluncur ke area kasir untuk melakukan pemesanan. Terima kasih sudah mampir! Pembelian dari Anda sangat berarti buat kami. Enjoy your time!.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Navigasi Cepat</h4>
+                    <ul>
+                        <li><a href="#beranda">Beranda</a></li>
+                        <li><a href="#tentang">Tentang Kami</a></li>
+                        <li><a href="#menu">Menu</a></li>
+                        <li><a href="#galeri">Galeri</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Jam Pelayanan</h4>
+                    <p style="font-size: 0.85rem; color: #d8d8d8;">Buka setiap hari melayani dine-in, take away, dan pesanan catering partai besar.</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Bengkel Jus Azzam. Hak Cipta Dilindungi Undang-Undang.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Script Generasi Menu Lengkap & Interaktivitas -->
+    <script>
+        // Hamburger Menu Mobile Toggle
+        const menuBtn = document.getElementById('menuBtn');
+        const navLinks = document.getElementById('navLinks');
+        menuBtn.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+
+        // Data Menu Lengkap Sesuai Permintaan dengan Gambar Spesifik
+        const menuData = [
+            // --- MAKANAN (22 Menu) ---
+            { n: "Bakso Biasa", p: "15.000", d: "Bakso kuah gurih disajikan dengan mie, bihun, dan taburan daun seledri.", cat: "makanan", img: "bb.jpeg" },
+            { n: "Bakso Tenes", p: "22.000", d: "Bakso berukuran jumbo berisi telur utuh dengan kuah rempah spesial.", cat: "makanan", img: "bt.jpeg" },
+            { n: "Bakso Urat", p: "22.000", d: "Bakso daging sapi dengan tekstur urat renyah dan kenyal yang kaya rasa.", cat: "makanan", img: "bu.jpeg" },
+            { n: "Bakso Campur", p: "27.000", d: "Kombinasi komplit bakso halus, bakso urat, tahu, dan pangsit renyah.", cat: "makanan", img: "bc.jpeg" },
+            { n: "Mie Pangsit", p: "15.000", d: "Mie kenyal disajikan dengan topping ayam cincang dan pangsit krispi.", cat: "makanan", img: "pst.jpeg" },
+            { n: "Mie Pangsit Bakso", p: "22.000", d: "Mie pangsit lengkap disajikan bersama pelengkap bakso sapi segar.", cat: "makanan", img: "pst b.jpeg" },
+            { n: "Mie Pangsit Urat", p: "25.000", d: "Mie pangsit lezat ditambah dengan bakso urat renyah favorit.", cat: "makanan", img: "pst u.jpeg" },
+            { n: "Mie Pangsit Tenes", p: "25.000", d: "Mie pangsit gurih disajikan mantap dengan bakso jumbo isi telur.", cat: "makanan", img: "pst t.jpeg" },
+            { n: "Bakmie Kuah", p: "15.000", d: "Bakmie kuah kaldu hangat yang gurih dengan campuran sayur dan telur.", cat: "makanan", img: "bkmi k.jpeg" },
+            { n: "Bakmie Goreng", p: "15.000", d: "Bakmie goreng bumbu tumis wangi dengan sayuran dan irisan bakso.", cat: "makanan", img: "bkmi g.jpeg" },
+            { n: "Gado-Gado", p: "15.000", d: "Sayuran segar rebus disiram bumbu kacang kental gurih khas nusantara.", cat: "makanan", img: "gdgd.jpeg" },
+            { n: "Nasi Telur Dadar", p: "15.000", d: "Nasi hangat disajikan bersama telur dadar gurih tebal dan sambal.", cat: "makanan", img: "ns t.jpeg" },
+            { n: "Nasi Goreng", p: "15.000", d: "Nasi goreng racikan bumbu otentik lengkap dengan telor dan kerupuk.", cat: "makanan", img: "nsgr.jpeg" },
+            { n: "Nasi Goreng Bakso", p: "20.000", d: "Nasi goreng gurih aromatik disajikan dengan topping irisan bakso sapi.", cat: "makanan", img: "nsgr b.jpeg" },
+            { n: "Nasi Goreng Spesial", p: "30.000", d: "Nasi goreng komplit dengan telur, bakso, suwiran ayam, dan sosis.", cat: "makanan", img: "nsgr spc.jpeg" },
+            { n: "Nasi Sop Ayam", p: "15.000", d: "Kuah sop bening kaya rempah disajikan hangat bersama nasi dan ayam.", cat: "makanan", img: "ns sop aym.jpeg" },
+            { n: "Nasi Ayam Lalapan", p: "27.000", d: "Ayam goreng renyah disajikan dengan nasi hangat, sambal, dan lalapan segar.", cat: "makanan", img: "lpn.jpeg" },
+            { n: "Nasi Ayam Geprek + Teh Jus", p: "23.000", d: "Paket krispi ayam geprek sambal pedas lengkap nasi dan kesegaran Teh Jus.", cat: "makanan", img: "aym g.jpeg" },
+            { n: "Nasi Ikan Goreng", p: "20.000–25.000", d: "Ikan segar digoreng garing renyah disajikan dengan sambal dan nasi.", cat: "makanan", img: "ns ikn.jpeg" },
+            { n: "Nasi Ikan Lele", p: "20.000–35.000", d: "Lele goreng gurih krispi dipadu nasi hangat dan sambal terasi pedas.", cat: "makanan", img: "ns lele.jpeg" },
+            { n: "Konro", p: "35.000", d: "Sup iga sapi khas Makassar dengan kuah rempah kaya rasa nan tebal.", cat: "makanan", img: "konro.jpeg" },
+            { n: "Coto", p: "30.000", d: "Soto daging sapi tradisional berkuah racikan bumbu kacang gurih khas.", cat: "makanan", img: "cto.jpeg" },
+
+            // --- MINUMAN (26 Menu) ---
+            { n: "Jus Alpukat", p: "15.000", d: "Jus buah alpukat murni kental disiram susu cokelat manis.", cat: "minuman", img: "apkt.jpeg" },
+            { n: "Jus Buah Naga", p: "10.000", d: "Jus buah naga merah kaya antioksidan yang manis dan menyegarkan.", cat: "minuman", img: "bnga.jpeg" },
+            { n: "Jus Sirsak", p: "10.000", d: "Sensasi asam manis alami buah sirsak blender segar.", cat: "minuman", img: "srsk.jpeg" },
+            { n: "Jus Mangga", p: "10.000", d: "Ekstrak buah mangga harum manis diblender halus dingin.", cat: "minuman", img: "mgga.jpeg" },
+            { n: "Jus Wortel", p: "10.000", d: "Jus wortel murni tinggi vitamin A untuk stamina harian.", cat: "minuman", img: "wortl.jpeg" },
+            { n: "Jus Semangka", p: "10.000", d: "Kesegaran buah semangka merah manis penghilang dahaga.", cat: "minuman", img: "smk.jpeg" },
+            { n: "Jus Pepaya", p: "10.000", d: "Jus pepaya manis alami yang baik untuk pencernaan.", cat: "minuman", img: "ppy.jpeg" },
+            { n: "Jus Timun", p: "10.000", d: "Olahan jus mentimun segar penurun panas dalam.", cat: "minuman", img: "tmn.jpeg" },
+            { n: "Jus Tomat", p: "10.000", d: "Jus tomat segar sehat dipadu manisnya gula alami.", cat: "minuman", img: "tmt.jpeg" },
+            { n: "Jus Jeruk", p: "10.000", d: "Jus jeruk peras murni kaya vitamin C yang menyegarkan.", cat: "minuman", img: "jrk.jpeg" },
+            { n: "Jus Melon", p: "10.000", d: "Jus buah melon hijau manis dingin yang menenangkan.", cat: "minuman", img: "mln.jpeg" },
+            { n: "Jus Apel", p: "10.000", d: "Blenderan buah apel manis alami kaya nutrisi.", cat: "minuman", img: "apl.jpeg" },
+            { n: "Jus Nanas", p: "10.000", d: "Jus nanas madu manis tropis dengan sensasi segar.", cat: "minuman", img: "nns.jpeg" },
+            { n: "Es Jeruk", p: "7.000", d: "Kesegaran jeruk peras asli dipadu es batu dingin.", cat: "minuman", img: "es jrk.jpeg" },
+            { n: "Es Teh", p: "5.000", d: "Teh manis segar pilihan teman bersantap ideal.", cat: "minuman", img: "es th.jpeg" },
+            { n: "Es Teler", p: "7.000", d: "Es serut dengan topping nangka, alpukat, kelapa muda & kuah santan.", cat: "minuman", img: "tlr.jpeg" },
+            { n: "Es Buah", p: "7.000", d: "Campuran aneka buah segar dengan sirup manis dan es dingin.", cat: "minuman", img: "es buh.jpeg" },
+            { n: "Es Capucino", p: "7.000", d: "Minuman kopi cappucino dingin berbusa manis nikmat.", cat: "minuman", img: "https://images.unsplash.com/photo-1517701604599-bb29b565090c?auto=format&fit=crop&w=500&q=80" },
+            { n: "Capucino Panas", p: "7.000", d: "Seduhan kopi cappucino hangat pas untuk bersantai.", cat: "minuman", img: "cap pns.jpeg" },
+            { n: "Es Choco Drink", p: "7.000", d: "Minuman cokelat manis dingin favorit segala usia.", cat: "minuman", img: "es ccd.jpeg" },
+            { n: "Choco Drink Panas", p: "7.000", d: "Sajian cokelat seduh hangat yang nikmat dan harum.", cat: "minuman", img: "pns ccd.jpeg" },
+            { n: "Kopi Hitam", p: "5.000", d: "Seduhan kopi hitam khas aromatik penyemangat hari.", cat: "minuman", img: "https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?auto=format&fit=crop&w=500&q=80" },
+            { n: "Kopi Susu", p: "7.000", d: "Paduan mantap kopi gurih dan manisnya susu kental manis.", cat: "minuman", img: "kop ss.jpeg" },
+            { n: "Teh Panas", p: "5.000", d: "Seduhan teh hangat aroma melati yang menenangkan.", cat: "minuman", img: "https://images.unsplash.com/photo-1576092768241-dec231879fc3?auto=format&fit=crop&w=500&q=80" },
+            { n: "Air Mineral Botol", p: "5.000", d: "Air mineral kemasan botol murni dan menyegarkan.", cat: "minuman", img: "btl.jpeg" },
+            { n: "Air Mineral Gelas", p: "1.000", d: "Air mineral kemasan gelas praktis penutup dahaga.", cat: "minuman", img: "gls.jpeg" },
+
+            // --- SNACK (3 Menu) ---
+            { n: "Tela-Tela", p: "10.000", d: "Singkong goreng krispi bertabur bumbu gurih aneka rasa.", cat: "snack", img: "tl.jpeg" },
+            { n: "Batagor", p: "10.000", d: "Bakso tahu goreng renyah disiram bumbu kacang kental pedas manis.", cat: "snack", img: "btg.jpeg" },
+            { n: "Pisang Lumpur", p: "10.000", d: "Pisang goreng manis dengan lumeran cokelat/keju melimpah.", cat: "snack", img: "piscok.jpeg" }
+        ];
+
+        // Render Menu Cards
+        function displayMenu(items) {
+            const grid = document.getElementById('menuGrid');
+            grid.innerHTML = items.map(item => `
+                <div class="menu-card">
+                    <div class="menu-img-wrap">
+                        <img src="${item.img}" alt="${item.n}" loading="lazy">
+                        <span class="category-tag">${item.cat.toUpperCase()}</span>
+                    </div>
+                    <div class="menu-details">
+                        <h4 class="menu-title">${item.n}</h4>
+                        <p class="menu-desc">${item.d}</p>
+                        <div class="menu-footer">
+                            <span class="menu-price">Rp ${item.p}</span>
+                        </div>
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        // Fungsi Filter Menu berdasarkan Kategori
+        function filterMenu(event, category) {
+            const buttons = document.querySelectorAll('.filter-btn');
+            buttons.forEach(btn => btn.classList.remove('active'));
+            event.currentTarget.classList.add('active');
+
+            if (category === 'all') {
+                displayMenu(menuData);
+            } else {
+                const filtered = menuData.filter(item => item.cat === category);
+                displayMenu(filtered);
+            }
+        }
+
+        // Tampilkan semua menu saat halaman pertama kali dimuat
+        document.addEventListener('DOMContentLoaded', () => {
+            displayMenu(menuData);
+        });
+    </script>
+</body>
+</html>
